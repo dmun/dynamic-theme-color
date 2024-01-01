@@ -1,0 +1,16 @@
+{
+	"manifest_version": 2,
+	"name": "Dynamic theme color",
+	"version": "0.1",
+	"description": "Dynamically changes the theme frame color to the 'theme-color' metakey value of the current page.",
+    "permissions": ["activeTab", "tabs", "theme", "management"],
+	"background": {
+		"scripts": ["js/background.js"]
+	},
+	"content_scripts": [
+		{
+			"matches": ["*://*/*"],
+			"js": ["js/content.js"]
+		}
+	]
+}
